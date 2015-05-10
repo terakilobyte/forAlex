@@ -1,0 +1,28 @@
+{
+  "name": "reactTunes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DevMountain/reactweek-reactTunes"
+  },
+  "author": "Tyler McGinnis",
+  "dependencies": {
+    "babel": "^5.2.17",
+    "griddle-react": "^0.2.4",
+    "jquery": "^2.1.3",
+    "lodash": "^3.8.0",
+    "react": "^0.12.2",
+    "react-infinite": "^0.3.4",
+    "react-infinite-grid": "^0.3.9",
+    "react-infinite-list": "0.0.5",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "babel-core": "^5.2.17",
+    "babel-loader": "^5.0.0",
+    "jsx-loader": "^0.12.2",
+    "webpack": "^1.5.3"
+  }
+}
