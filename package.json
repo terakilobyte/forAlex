@@ -17,6 +17,7 @@
     "react-infinite": "^0.3.4",
     "react-infinite-grid": "^0.3.9",
     "react-infinite-list": "0.0.5",
+    "react-scrollbars": "0.0.4",
     "underscore": "^1.7.0"
   },
   "devDependencies": {

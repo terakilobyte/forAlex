@@ -2,6 +2,7 @@ var React = require('react');
 var SearchItunes = require('./SearchItunes');
 var Griddle = require('griddle-react');
 var InfiniteGrid = require('react-infinite-grid');
+var {ScrollbarWrapper} = require('react-scrollbars');
 
 
 var ImageComponent = React.createClass({
@@ -96,12 +97,12 @@ var App = React.createClass({
     if (this.state.data) {
       var items = this.state.data.map(elem => {
         return (
-          <ImageComponent data={elem.artworkUrl100}/>
+          <ImageComponent className="infinite" data={elem.artworkUrl100}/>
         );
       });
     }
     return (
-      <span>
+      <span className="infinite">
         <div className="navbar navbar-default navbar-fixed-top"
           role="navigation"
           style={this.styles.searchBarStyle}>
@@ -113,7 +114,7 @@ var App = React.createClass({
             </div>
           </div>
         </div>
-        <div className="col-xs-6" style={this.styles.griddleStyle}>
+        <div className="row infinite" style={this.styles.griddleStyle}>
         {/*
         <div className="panel panel-default" style={this.styles.griddleStyle}>
           <div className="panel-heading">
@@ -131,14 +132,17 @@ var App = React.createClass({
         </div>
         */}
           {this.state.data ? (
+            <ScrollbarWrapper vertical={true} horizontal={true}>
           <InfiniteGrid
+            className="infinite"
             style={this.styles.gridStyle}
             entries={items}
-            wrapperHeight={100}
+            wrapperHeight={150}
             padding={10}
             height={100}
             width={100}>
           </InfiniteGrid>
+          </ScrollbarWrapper>
             ) : ( <div /> )}
         </div>
       </span>
